@@ -36,4 +36,4 @@ local f = function( i, n )
 end
 
 fib( f )
-print( "sum:", sum )
+return sum

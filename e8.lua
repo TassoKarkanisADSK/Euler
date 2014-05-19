@@ -36,4 +36,4 @@ for index = 1,size do
    end
 end
 
-print( "maxProd:", maxProd )
+return maxProd

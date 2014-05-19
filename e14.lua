@@ -27,5 +27,4 @@ for i = 1, 999999 do
       
 end
 
-print( "maxI", maxI )
-print( "maxN", maxN )
+return maxI

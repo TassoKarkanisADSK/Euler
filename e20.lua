@@ -154,9 +154,9 @@ end
 
 
 local f100 = factorial( 100 )
-print( f100 )
 local sum = 0
 for i = 1, #f100 do
    sum = sum + f100[i]
 end
-print( "sum:", sum )
+
+return sum

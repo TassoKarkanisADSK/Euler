@@ -30,7 +30,5 @@ while y >= 1 do
    y = y - 1
 end
 
-print( "n:", n )
-print( "nx:", nx )
-print( "ny:", ny )
+return n
 

@@ -36,4 +36,5 @@ local f = function( p )
    return true
 end
 primes( f )
-print( "n:", n )
+
+return n

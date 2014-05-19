@@ -124,10 +124,5 @@ triangular( function(t)
 		  return true
 	       end
             end )
-print( "n:", n )
-local t = primeFactorization( n )
-local str = ""
-for k,v in pairs(t) do
-   str = str .. string.format("%d(%d)", k, v)
-end
-print( str )
+
+return n

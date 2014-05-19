@@ -4,4 +4,5 @@ for i = 1,999 do
       sum = sum + i
    end
 end
-print( "sum: ", sum )
+
+return sum

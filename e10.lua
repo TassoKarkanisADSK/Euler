@@ -42,7 +42,6 @@ local sum = 0
 primes( function(i,p)
            if p < 2000000 then
               sum = sum + p
-              print( "p:", p, "sum:", sum )
               return true
            else
               return false
@@ -50,4 +49,4 @@ primes( function(i,p)
         end )
 
 
-print( "sum:", sum )
+return sum

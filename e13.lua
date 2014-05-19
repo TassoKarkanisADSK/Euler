@@ -152,7 +152,7 @@ end
 
 local sum = asTable( "0" )
 for i = 1,#numbers do
-   print( asString(sum) )
    sum = add( sum, asTable(numbers[i]) )
 end
-print( asString(sum) )
+local str = asString(sum)
+return string.sub( str, 1, 10 )

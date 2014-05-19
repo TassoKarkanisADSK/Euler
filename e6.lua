@@ -14,5 +14,5 @@ end
 
 
 local n = 10
-print( "difference:", squareOfSum(n) - sumOfSquares(n) )
+return squareOfSum(n) - sumOfSquares(n)
 

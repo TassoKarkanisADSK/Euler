@@ -30,7 +30,8 @@ end
 
 
 local N = { 1 }
-for i = 1,1001 do
-   print( i-1, asString(N), digitSum(N) )
+for i = 1,1000 do
    multByTwo( N )
 end
+
+return digitSum(N)

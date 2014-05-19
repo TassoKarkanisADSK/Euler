@@ -38,16 +38,14 @@ end
 local prevBest = pyramid[#pyramid]
 
 for i = #pyramid - 1, 1, -1 do
-   print( "row:", i )
    local row = pyramid[i]
    local best = {}
    for j = 1, #row do
       local b = row[j] + max(prevBest[j], prevBest[j+1])
-      print( "b:", b )
       table.insert( best, b )
    end
 
    prevBest = best
 end
 
-print( prevBest[1] )
+return prevBest[1]

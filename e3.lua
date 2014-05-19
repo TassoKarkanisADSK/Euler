@@ -46,7 +46,6 @@ local f = function( p )
 
    if BigNum.gcd(p,n) ~= one then
       factor = p
-      print( "factor:", factor )
       n = n / p
 
       if isPrime(n) then
@@ -62,5 +61,5 @@ end
 
 primes( f )
 
-print( "factor:", factor )
+return factor
 

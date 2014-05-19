@@ -13,9 +13,6 @@ while true do
       break
    end
    n = n + 20
-   if n % 10000 == 0 then
-      print( "n:", n )
-   end
 end
 
-print( "n:", n )
+return n

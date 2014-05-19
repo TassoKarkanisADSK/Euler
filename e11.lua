@@ -62,9 +62,4 @@ for i = 1, 20 do
    end
 end
 
-
-print( "maxProd:", maxProd )
-print( "i,j: ", grid[ maxI + 20*(maxJ - 1)] )
-print( "maxI:", maxI )
-print( "maxJ:", maxJ )
-print( "maxDir:", maxDir[1], maxDir[2] )
+return maxProd

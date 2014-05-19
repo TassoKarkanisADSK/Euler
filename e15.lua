@@ -1,4 +1,4 @@
-paths = {}
+local paths = {}
 
 local function latticePaths( i, j )
    if i == 1 then 
@@ -18,6 +18,4 @@ local function latticePaths( i, j )
    end
 end
 
-for i = 1, 20 do
-   print( i, latticePaths(i,i) )
-end
+return latticePaths(20, 20)

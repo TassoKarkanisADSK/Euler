@@ -64,10 +64,6 @@ for i = 1, 12*100 do
    end
 end
 
-for i=1901, 2000 do
-   print( i, isLeapYear(i) )
-end
-
-print( "sundays:", sundays )
+return sundays
 
 

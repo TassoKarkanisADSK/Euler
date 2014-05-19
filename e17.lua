@@ -11,7 +11,6 @@ local tens = {
    "eighty", "ninety" }
 
 local function add( sum, str )
-   print( "adding:", str )
    sum = sum + #str
    return sum
 end
@@ -76,6 +75,7 @@ local sum = 0
 for i = 1, 1000 do
    sum = sum + count( i )
 end
-print( "sum:", sum )
+
+return sum
 
 
