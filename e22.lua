@@ -23,6 +23,4 @@ for i = 1, #names do
    sum = sum + score
 end
 
-print( "COLIN", alphabeticalValue("COLIN") )
-
 return sum
