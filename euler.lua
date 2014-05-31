@@ -37,20 +37,28 @@ local function test()
       { "e29", "9183" },
       { "e30", "443839" },
       { "e31", "73682" },
+      { "e32", "45228" },
    }
 
+   local t0 = os.clock()
    for i = 1, #tests do
       local t = tests[i]
-      print( "Running test " .. tostring(i) )
+      local t1 = os.clock()
       local answer = dofile( t[1] .. ".lua" )
+      local t2 = os.clock()
       answer = tostring( answer )
       if answer ~= t[2] then
          print( "Test " .. tostring(i) .. " failed!" )
          print( "    result:", answer )
          print( "  expected:", t[2] )
          break
+      else
+          local msg = string.format( "Test %s: %f s", tostring(i), t2 - t1 )
+          print( msg )
       end
    end
+   local t1 = os.clock()
+   print( string.format("Total time: %f s",t1 - t0) )
 end
 
 
