@@ -40,6 +40,7 @@ local function test()
       { "e32", "45228" },
       { "e33", "100" },
       { "e34", "40730" },
+      { "e35", "55" },
    }
 
    local t0 = os.clock()
