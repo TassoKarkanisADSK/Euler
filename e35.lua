@@ -1,4 +1,5 @@
 require( "euler/primes" )
+require( "euler/sundry" )
 
 -- compute the primes up to 1 million
 
@@ -15,18 +16,6 @@ do
         
         i = i + 1
     end
-end
-
-local function getDigits( n )
-    local digits = {}
-    
-    while n > 0 do
-        local d = n % 10
-        table.insert( digits, d )
-        n = (n - d) / 10
-    end
-
-    return digits
 end
 
 
