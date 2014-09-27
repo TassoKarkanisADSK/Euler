@@ -61,6 +61,12 @@ local function primeFactor( n )
 end
 
 
+function isPrime( n )
+    local p = primeFactor( n )
+    return p == n
+end
+
+
 function primeFactorization( n )
    local originalN = n
    local f = {}
