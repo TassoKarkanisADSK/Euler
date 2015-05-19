@@ -49,8 +49,6 @@ local count = 0
 while true do
     if a == b and b == c then
         count = count + 1
-        print( "a:", a )
-        print( "count:", count )
     end
 
     if count == 3 then
@@ -64,9 +62,6 @@ while true do
     else
         c = h()
     end
-
-
-    print( "a:", a, "b:", b, "c:", c )
 end
         
     
