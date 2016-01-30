@@ -84,8 +84,12 @@ function primeFactorization( n )
       n = n / p
    end
    
-   -- remove the original n again
+   -- remove the original n again (unless n is prime)
    f[originalN] = nil
+   if next(f) == nil then
+       f[originalN] = 1
+   end
+   
    return f
 end
 
