@@ -116,7 +116,8 @@ local sum = 0
 for i = 1, #maxResult do
    sum = sum + maxResult[i]
 end
-print(sum)
+
+return sum
 
 
 		 
