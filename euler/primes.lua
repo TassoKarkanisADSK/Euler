@@ -1,45 +1,45 @@
+-- table of primes computed so far
+local primes = {2}
 
-local function ithPrimeGenerator()
-   local primes = { 2 }
+-- set of primes computed so far
+local primesSet = {[2] = true}
    
-   local computeNextPrime = function()
-                               local n = primes[#primes] + 1
-                               while true do
-                                  -- check if n is prime
-                                  local isPrime = true
-                                  local i = 1
-                                  while primes[i]*primes[i] <= n do
-                                     if n % primes[i] == 0 then
-                                        isPrime = false
-                                        break
-                                     end
-                                     i = i + 1
-                                  end
-                                  
-                                  if isPrime then
-                                     table.insert( primes, n )
-                                     break
-                                  end
-                                  
-                                  n = n + 1
-                               end
-                            end
-   
-   local f = function( i )
-                -- check if this prime is already computed
-                if primes[i] == nil then
-                   -- compute primes until we reach this one
-                   for j = #primes, i do
-                      computeNextPrime()
-                   end
-                end
-                
-                return primes[i]
-             end
-   
-   return f
+local function computeNextPrime()
+   local n = primes[#primes] + 1
+   while true do
+	  -- check if n is prime
+	  local isPrime = true
+	  local i = 1
+	  while primes[i]*primes[i] <= n do
+		 if n % primes[i] == 0 then
+			isPrime = false
+			break
+		 end
+		 i = i + 1
+	  end
+	  
+	  if isPrime then
+		 table.insert( primes, n )
+		 primesSet[n] = true
+		 break
+	  end
+	  
+	  n = n + 1
+   end
 end
-ithPrime = ithPrimeGenerator()
+
+
+function ithPrime(i)
+   -- check if this prime is already computed
+   if primes[i] == nil then
+	  -- compute primes until we reach this one
+	  for j = #primes, i do
+		 computeNextPrime()
+	  end
+   end
+   
+   return primes[i]
+end
 
 
 local function primeFactor( n )
@@ -61,9 +61,21 @@ local function primeFactor( n )
 end
 
 
-function isPrime( n )
-    local p = primeFactor( n )
-    return p == n
+function isPrime(n)
+   -- check if we have already computed this far
+   local p = primes[#primes]
+   if n <= p then
+	  local q = primesSet[n]
+	  if q then
+		 return true
+	  else
+		 return false
+	  end
+   end
+
+   -- find a prime factor
+   local q = primeFactor(n)
+   return q == n
 end
 
 
