@@ -55,5 +55,4 @@ local function run()
     end
 end
 
-local x = run()
-print(x)
+return run()

@@ -118,7 +118,3 @@ for i = 1, #maxResult do
 end
 
 return sum
-
-
-		 
-

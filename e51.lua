@@ -1,6 +1,7 @@
 require( "euler/primes" )
 
 local familySize = 8
+local answer
 
 local function checkFamily(str)
     local count = 0
@@ -29,8 +30,8 @@ local function checkFamily(str)
     end
 
     if count == 8 then
-        print(first)
-        os.exit(0)
+	    answer = first
+        error("stop")
     end
 end
 
@@ -121,4 +122,6 @@ local function run()
 end
 
 
-run()
+-- some unusual flow control here!
+pcall(run)
+return answer

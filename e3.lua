@@ -61,5 +61,4 @@ end
 
 primes( f )
 
-return factor
-
+return tostring(factor)

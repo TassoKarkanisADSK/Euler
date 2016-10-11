@@ -16,7 +16,6 @@ end
 local function run()
     local maxSum = 0
     for i = 2, 99 do
-        print("i:", i)
         local n = BigNum.new(i)
         local m = n
         for j = 2, 99 do
@@ -32,5 +31,4 @@ local function run()
 end
 
 
-local count = run()
-print(count)
+return run()

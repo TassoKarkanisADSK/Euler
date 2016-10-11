@@ -10,8 +10,7 @@ require( "euler/primes" )
 
 local n = 3
 while true do
-    local factors = primeFactorization( n )
-    if next(factors) ~= nil then
+    if not isPrime(n) then
         local found = false
 
         local i = 1

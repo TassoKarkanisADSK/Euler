@@ -35,5 +35,4 @@ local function run()
     return count
 end
 
-local count = run()
-print(count)
+return run()
